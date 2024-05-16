@@ -8,3 +8,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <App />
   </React.StrictMode>,
 )
+
+// createRoot creates DOM like structure just like bbrowser behind the scene. SO that it can compare the main DOM and this DOM. And update only those things which is updated in UI.
