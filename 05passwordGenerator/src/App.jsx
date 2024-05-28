@@ -5,7 +5,7 @@ import './App.css'
 
 function App() {
 
-  const [length, setLength] = useState(8)
+  const [length, setLength] = useState(8) // Inside the paranthesis is the default value of the variable "length". Any type of datatype can be put into the paranthesis
   const [numberAllowed, setNumberAllowed] = useState(false)
   const [charAllowed, setCharAllowed] = useState(false)
   const [password, setPassword] = useState("")
@@ -21,8 +21,10 @@ function App() {
     if(numberAllowed) str += "0123456789"
     if(charAllowed) str += "`~!@#$%^&*()_+-=<>,.?/:\";'{}[]\|"
 
+    console.log(length, numberAllowed, charAllowed, password);
+
     for (let i = 1; i <= length; i++) {
-      let char = Math.floor(Math.random()*str.length + 1)
+      let char = Math.floor(Math.random()*str.length)
       pass += str.charAt(char)
     }
 
