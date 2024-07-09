@@ -5,16 +5,24 @@ function App() {
 
   const [counter, setCounter] = useState(15)
 
+  // Rerendering : In React, re-rendering means updating the UI to reflect changes in the component's state or props. When a component's state or props change, React re-executes the component function to produce a new UI representation, then updates the DOM to match this new output. This process ensures that the UI stays in sync with the application's data.
+
   //let counter = 15
 
   const addValue = ()=>{
-    setCounter(counter + 1)
-    if(counter === 20) return setCounter(counter)
+    // setCounter(counter + 1)
+    if(counter === 20) return 
+    setCounter(prev => prev + 1)
+    // setCounter((prev)=>{
+      //   prev + 1
+      // })
+      // if(counter === 20) return setCounter(counter) -- This line is equivalent to line 12 of if statement
   }
 
   const decreaseValue = ()=>{
-    setCounter(counter-1)
-    if(counter === 0) return setCounter(counter)
+    // setCounter(counter-1)
+    if(counter === 0) return 
+    setCounter(prev => prev - 1)
   }
 
   return (
